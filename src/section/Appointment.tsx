@@ -1,7 +1,7 @@
 
 import { IoIosArrowDown  } from "react-icons/io";
 
-export const Appointment = () => {
+const Appointment = () => {
   return (
     <section className="appointment section" id='/appointment'>
       <div className="container mx-auto">
@@ -59,3 +59,4 @@ export const Appointment = () => {
   )
 }
 
+export default Appointment

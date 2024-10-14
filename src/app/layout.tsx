@@ -1,6 +1,7 @@
 "use client";
 import "@/style/globals.css";
 import DefaultLayout from "@/components/Layout/DefaultLayout";
+import { poppins } from "@/lib/fonts";
 
 
 export default function RootLayout({
@@ -10,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={poppins.className}>
         <DefaultLayout>
           {children}
         </DefaultLayout>

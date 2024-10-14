@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { IoIosArrowDown  } from "react-icons/io";
 
@@ -5,21 +6,21 @@ export const Accordion = (props:any) => {
     const [accordionOpen, setAccordionOpen] = useState(false);
   return (
     <>
-   <div className='flex flex-col '>
+   <div className='flex flex-col'>
         <div className='faq__item flex flex-col px-[30px] pt-7 border-b cursor-pointer select-none'>
         {/* title and icon */}
         <button 
         className='flex items-center justify-between mb-[10px] xl:mr-[5px]'
         onClick={()=> setAccordionOpen(!accordionOpen)}
         >
-        <h4 className='h4'>{props.question}</h4>
-        <div className='faq__btn text-accent'>
+        <h4 className='text-xl font-semibold text-left'>{props.question}</h4>
+        <div className='faq__btn text-accent '>
             <IoIosArrowDown  className={`text-2xl transform origin-center transition duration-200 
             ${accordionOpen && '!rotate-180'}`}/> 
             
         </div>
         </button>
-        <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 
+        <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 p-1
             ${accordionOpen ?
                 "grid-rows-[1fr] opacity-100"
                 :

@@ -1,3 +1,4 @@
+'use client'
 import FaDoctor1 from '../../public/assets/img/team/doctor-1.png';
 import FaDoctor2 from '../../public/assets/img/team/doctor-2.png';
 import FaDoctor3 from '../../public/assets/img/team/doctor-3.png';
@@ -13,9 +14,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-export const Team = () => {
+const Team = () => {
   return (
-    <section className="team section" id='/doctors'>
+    <section className="team section" id='/dentist'>
       <div className="container mx-auto">
         {/* title */}
         <h2 className='team__title h2 mb-[50px] text-center xl:text-left'>Our Team</h2>
@@ -158,3 +159,4 @@ export const Team = () => {
   )
 }
 
+export default Team

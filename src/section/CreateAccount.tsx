@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CreateAccount = () => {
+const CreateAccount = () => {
   return (
     <div className='mx-auto items-center justify-center max-w-[350px] mt-8 '>
         <div className="grid rounded-lg border bg-card text-card-foreground shadow-sm" id='/register'>
@@ -49,4 +49,5 @@ export const CreateAccount = () => {
     </div>
   )
 }
+export default CreateAccount
 

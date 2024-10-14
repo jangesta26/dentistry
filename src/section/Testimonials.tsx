@@ -1,3 +1,4 @@
+'use client'
 import FaTestimonial from '../../public/assets/img/testimonials/img.png';
 import Image from 'next/image';
 
@@ -8,8 +9,8 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-
-export const Testimonials = () => {
+import { testimonials } from '@/test-apis/testimonials';
+const Testimonials = () => {
   return (
     <section className="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12
     xl:min-h-[595px] xl:pu-0">
@@ -31,77 +32,30 @@ export const Testimonials = () => {
                 modules={[Pagination]}
                 className="mySwiper"
               >
-               
-                {/* Slides 1 */} 
-                <SwiperSlide className="swiper-slide">
-                  <div className='h-full flex flex-col justify-center items-start'>
-                    <div className='max-w-[680px] mx-auto text-center xl:text-left'>
-                      <p className='font-light relative text-[22px] text-[#4c5354] leading-[190%]
-                      text-center xl:text-left before:bg-qouteLeft before:bg-contain before:bg-bottom
-                      before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-                      after:bg-qouteRight after:bg-contain after:bg-bottom after:inline-block 
-                      after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7'>
-                        {/* message */}
-                        <span className='mx-2'>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                          Semper quis lectus ut venenatis tellus.
-                        </span>
-                      </p>
-                      {/* name */}
-                      <div className='text-[26px] text-[#4c5354] font-semibold'>Max Zackerb</div>
-                      {/* job */}
-                      <div className='text-[#9ab4b7] font-medium uppercase tracking-[2.24px]'>Customer</div>
+                {
+                  testimonials.map((item)=>(
+                  <SwiperSlide key={item.id} className="swiper-slide">
+                    <div className='h-full flex flex-col justify-center items-start'>
+                      <div className='max-w-[680px] mx-auto text-center xl:text-left'>
+                        <p className='font-light relative text-[22px] text-[#4c5354] leading-[190%]
+                        text-center xl:text-left before:bg-qouteLeft before:bg-contain before:bg-bottom
+                        before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+                        after:bg-qouteRight after:bg-contain after:bg-bottom after:inline-block 
+                        after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7'>
+                          {/* message */}
+                          <span className='mx-2'>
+                            {item.message}
+                          </span>
+                        </p>
+                        {/* name */}
+                        <div className='text-[26px] text-[#4c5354] font-semibold'>{item.name}</div>
+                        {/* job */}
+                        <div className='text-[#9ab4b7] font-medium uppercase tracking-[2.24px]'>{item.job}</div>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-                {/* Slides 1 */} 
-                <SwiperSlide className="swiper-slide">
-                  <div className='h-full flex flex-col justify-center items-start'>
-                    <div className='max-w-[680px] mx-auto text-center xl:text-left'>
-                      <p className='font-light relative text-[22px] text-[#4c5354] leading-[190%]
-                      text-center xl:text-left before:bg-qouteLeft before:bg-contain before:bg-bottom
-                      before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-                      after:bg-qouteRight after:bg-contain after:bg-bottom after:inline-block 
-                      after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7'>
-                        {/* message */}
-                        <span className='mx-2'>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                          Semper quis lectus ut venenatis tellus.
-                        </span>
-                      </p>
-                      {/* name */}
-                      <div className='text-[26px] text-[#4c5354] font-semibold'>Max Zackerb</div>
-                      {/* job */}
-                      <div className='text-[#9ab4b7] font-medium uppercase tracking-[2.24px]'>Customer</div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                {/* Slides 1 */} 
-                <SwiperSlide className="swiper-slide">
-                  <div className='h-full flex flex-col justify-center items-start'>
-                    <div className='max-w-[680px] mx-auto text-center xl:text-left'>
-                      <p className='font-light relative text-[22px] text-[#4c5354] leading-[190%]
-                      text-center xl:text-left before:bg-qouteLeft before:bg-contain before:bg-bottom
-                      before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-                      after:bg-qouteRight after:bg-contain after:bg-bottom after:inline-block 
-                      after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7'>
-                        {/* message */}
-                        <span className='mx-2'>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                          Semper quis lectus ut venenatis tellus.
-                        </span>
-                      </p>
-                      {/* name */}
-                      <div className='text-[26px] text-[#4c5354] font-semibold'>Max Zackerb</div>
-                      {/* job */}
-                      <div className='text-[#9ab4b7] font-medium uppercase tracking-[2.24px]'>Customer</div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-               
+                  </SwiperSlide>
+                  ))
+                }
               </Swiper>
               
             </div>
@@ -112,3 +66,4 @@ export const Testimonials = () => {
   )
 }
 
+export default Testimonials

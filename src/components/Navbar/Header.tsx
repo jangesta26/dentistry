@@ -24,20 +24,18 @@ export const Header = () => {
 
   const mobileNavItem = [
         {link: "Home", path: "/home"},
-        {link: "Doctors", path: "/doctors"},
-        {link: "Department", path: "/department"},
-        {link: "Services", path: "/services"},
+        {link: "Dentist", path: "/dentist"},
+        {link: "Our Services", path: "/services"},
         {link: "Blog", path: "/blog"},
-        {link: "Contact", path: "/contact"},
+        {link: "Careers", path: "/careers"},
   ];
 
   const desktopNavItem = [
     {link: "Home", path: "/home"},
-    {link: "Doctors", path: "/doctors"},
-    {link: "Department", path: "/department"},
-    {link: "Services", path: "/services"},
+    {link: "Dentist", path: "/dentist"},
+    {link: "Our Services", path: "/services"},
     {link: "Blog", path: "/blog"},
-    {link: "Contact", path: "/contact"},
+    {link: "Careers", path: "/careers"},
 ];
   
 
@@ -66,7 +64,7 @@ export const Header = () => {
                 </div>
 
                 {/* btn */}
-                <div className='flex gap-2'>
+                <div className='flex flex-wrap items-center justify-center gap-2'>
                 <Link to='/appointment' key='/appointment' spy={true} smooth={true} duration={500} offset={50} > <button className='btn btn-sm btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0'>Book Now</button></Link>
                 <Link to='/register' key='/register' spy={true} smooth={true} duration={500} offset={50} > <button className='btn btn-sm btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0'>Login</button></Link>
                 </div>
