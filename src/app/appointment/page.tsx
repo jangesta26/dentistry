@@ -1,10 +1,9 @@
+import Appointment from '@/section/Appointment'
 import React from 'react'
 
 const AppoinmentPage = () => {
   return (
-    <div>
-      
-    </div>
+      <Appointment/>
   )
 }
 

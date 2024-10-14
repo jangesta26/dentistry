@@ -48,8 +48,8 @@ const Appointment = () => {
             <input type="text" className='input' placeholder='Phone Number (+63) 123 4567 890' />
           </div>
           <div className='flex flex-col xl:flex-row gap-5'>
-            <input type="date" className="input" placeholder='Full Name' />
-            <input type="time"  className="input" placeholder='Phone Number (+63) 123 4567 890' />
+            <input type="date" className="input"  />
+            <input type="time"  className="input" />
           </div>
           {/* btn */}
           <button className='btn btn-lg btn-accent xl:self-start' type='submit'>Book an appointment</button>

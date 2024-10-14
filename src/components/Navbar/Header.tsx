@@ -47,7 +47,7 @@ export const Header = () => {
             gap-y-4 lg:gap-y-0'>
             {/* Brand Logo */}
             <div className='flex justify-center lg:justify-normal'>
-                <a href="#something">
+                <a href="/">
                 <Image src={brandLogo} alt="" />
                 </a>
             </div>
